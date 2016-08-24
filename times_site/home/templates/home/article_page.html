@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load wagtailimages_tags wagtailcore_tags %}
+
+
+{% block content %}
+
+
+    <div id="newsdetails" class="container-fluid">
+        <div class="section">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div id="site-content" class="site-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="left-content">
+                                    <h1 class="section-title title">Section title</h1>
+                                    <div class="details-news">
+                                        <div class="post">
+                                            <div class="entry-header">
+                                                <div class="entry-thumbnail">
+                                                    {% if page.featured_image %}
+                                                        {% image page.featured_image original as image %}
+                                                    {% elif page.thumbnail_image %}
+                                                        {% image page.thumbnail_image original as image %}
+                                                    {% endif %}
+                                                    <img class="img-responsive"
+                                                             src="{{ image.url }}"
+                                                             alt="{{ image.alt }}" />
+
+                                                </div>
+                                            </div>
+                                            <div class="post-content">
+                                                <div class="entry-meta">
+                                                    <ul class="list-inline">
+                                                        <li class="posted-by"><i class="fa fa-user"></i> <a href="#">{{ page.owner }}</a></li>
+                                                        <li class="publish-date"><a href="#"><i class="fa fa-clock-o"></i>{{ page.first_published_at }}</a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="entry-title">
+                                                    {{ page.title }}
+                                                </h2>
+                                                <div class="entry-content">
+                                                    {{ page.body|richtext }}
+                                                </div>
+                                            </div>
+                                        </div><!--/post-->
+                                    </div><!--/.section-->
+                                </div><!--/.left-content-->
+                            </div>
+                        </div>
+                    </div><!--/#site-content-->
+
+</div></div></div>
+</div><!--/#main-wrapper-->
+
+
+{% endblock %}

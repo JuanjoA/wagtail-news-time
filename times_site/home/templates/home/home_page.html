@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load homepage_tags %}
+
+{% block content %}
+
+	<main class="container-fluid">
+	    <div class="row">
+	        <div class="col-sm-3">
+	        </div>
+
+	        <div class="col-sm-6">
+
+	            <section class="top-stories">
+	                <h3 class="brief-heading"><span>The</span> Brief</h3>
+					{% top_stories %}
+	            </section>
+            </div>
+
+            <div class="col-sm-3">
+	        </div>
+	    </div>
+	    <hr>
+	</main>
+{% endblock %}

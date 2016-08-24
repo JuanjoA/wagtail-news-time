@@ -1,0 +1,41 @@
+{% load wagtailimages_tags %}
+
+{% for latest_story in latest_histories %}
+    {% if latest_story.featured_image %}
+        <!-- Top story style -->
+        <article>
+            <figure>
+                <a href="{{ latest_story.url }}">
+                    {% image latest_story.featured_image original as featured_image %}
+                    <img class="img-responsive" src="{{ featured_image.url }}" alt="{{ featured_image.alt }}">
+                </a>
+            </figure>
+            <div class="home-brief-title-and-excerpt">
+                <h2><a href="{{ latest_story.url }}">{{ latest_story.title }}</a></h2>
+                <p class="home-excerpt">
+                    {{ latest_story.excerpt }}
+                </p>
+            </div>
+        </article>
+    {% else %}
+        <!-- Non-top story style -->
+        <article class="list-article col-sm-12">
+            <figure class="col-sm-2">
+                <a href="{{ latest_story.url }}">
+                    {% if latest_story.thumbnail_image %}
+                        {% image latest_story.thumbnail_image original as thumbnail_image %}
+                        <img class="img-responsive" src="{{ thumbnail_image.url }}">
+                    {% endif %}
+                </a>
+            </figure>
+            <div class="col-sm-10 home-brief-title-and-excerpt">
+                <h2><a href="{{ latest_story.url }}">{{ latest_story.title }}</a></h2>
+                <p class="home-excerpt">
+                    {{ latest_story.excerpt}}
+                </p>
+            </div>
+        </article>
+    {% endif %}
+{% endfor %}
+
+

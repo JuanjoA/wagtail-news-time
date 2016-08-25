@@ -1,5 +1,7 @@
 ## Fork updated of [wagtail-screencast-hellowagtail] (https://github.com/muthuridennis/wagtail-screencast-hellowagtail)
 
+Tested ok with python 3.5, django 1.10 and wagtail 1.6
+
 ### Include bdd db.sqlite3 with data, for rapid view
 (no migrate needed, and superuser is *admin* with password *admin*, but can create another superuser)
 

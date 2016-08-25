@@ -7,36 +7,42 @@ Tested ok with python 3.5, django 1.10 and wagtail 1.6
 
 ### How to use:
 
-##### 1. Create work directory and virtualenv:
+
+##### 1. Clone repository:
+
 ```
-    $ mkdir wagtail-news-time
+    $ git clone https://github.com/JuanjoA/wagtail-news-time.git
+```
+
+##### 2. Create work directory and virtualenv:
+```
     $ cd wagtail-news-time/
     $ virtualenv --python=python3.5 env
     $ source env/bin/activate
 ```
 
 
-##### 2. Install requirements:
+##### 3. Install requirements:
 
 ```
     $ pip install -r requirements.txt
 ```
 
 
-##### 3. Make migrations:
+##### 4. Make migrations:
 
 ```
     $ cd times_site
     $ ./manage.py migrate
 ```
 
-##### 4. Create super user:
+##### 5. Create super user:
 
 ```
     $ ./manage.py createsuperuser
 ```
 
-##### 4. Runserver:
+##### 6. Runserver:
 
 ```
     $ ./manage.py runserver

@@ -14,7 +14,7 @@ Tested ok with python 3.5, django 1.10 and wagtail 1.6
     $ git clone https://github.com/JuanjoA/wagtail-news-time.git
 ```
 
-##### 2. Create work directory and virtualenv:
+##### 2. Create virtualenv and activate:
 ```
     $ cd wagtail-news-time/
     $ virtualenv --python=python3.5 env
@@ -27,7 +27,15 @@ Tested ok with python 3.5, django 1.10 and wagtail 1.6
 ```
     $ pip install -r requirements.txt
 ```
+Note: Pillow installation require compilation, and some system dependencies:
 
+[http://pillow.readthedocs.io/en/stable/installation.html] (http://pillow.readthedocs.io/en/stable/installation.html)
+
+* Ubuntu example:
+```
+    $ apt-get install -y build-essential python3 python3-dev python3-pip
+    $ apt-get install -y libjpeg-dev libtiff-dev zlib1g-dev libfreetype6-dev liblcms2-dev
+```
 
 ##### 4. Make migrations:
 

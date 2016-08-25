@@ -1,7 +1,7 @@
 ## Fork updated of [wagtail-screencast-hellowagtail] (https://github.com/muthuridennis/wagtail-screencast-hellowagtail)
 
 ### Include bdd db.sqlite3 with data, for rapid view
-(no migrate needed)
+(no migrate needed, and superuser ir *admin* with password *admin*, but can create another superuser)
 
 ### How to use:
 

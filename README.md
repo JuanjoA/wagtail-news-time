@@ -60,3 +60,24 @@ Now, you can access:  http://127.0.0.1:8000
 
 Or http://127.0.0.1:8000/admin
 
+
+
+Now include Dockerfile to deploy:
+
+```
+    $ git clone https://github.com/JuanjoA/wagtail-news-time.git
+
+    $ cd wagtail-news-time/
+
+    $ docker build --rm=true --force-rm --no-cache -t wagtail-news:0.1 .
+
+    $ docker run -it --rm --name news -p 8000:8000 wagtail-news:0.1
+
+```
+
+or simply (download from docker explore hub):
+
+```
+    $ docker run -it --rm --name news -p 8000:8000 wagtail-news:0.1
+
+```

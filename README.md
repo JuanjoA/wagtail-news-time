@@ -62,7 +62,7 @@ Or http://127.0.0.1:8000/admin
 
 
 
-### Now include Dockerfile to deploy:
+### Now include Dockerfile (with alpine linux, 351.2MBytes) to deploy:
 
 ```
     $ git clone https://github.com/JuanjoA/wagtail-news-time.git

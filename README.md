@@ -81,3 +81,5 @@ or simply (download from docker explore hub):
     $ docker run -it --rm --name news -p 8000:8000 juanjoa/wagtail-news-time:latest
 
 ```
+
+.

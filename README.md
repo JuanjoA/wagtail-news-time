@@ -56,13 +56,13 @@ Note: Pillow installation require compilation, and some system dependencies:
     $ ./manage.py runserver
 ```
 
-Now, you can access:  http://127.0.0.1:8000
+You can access:  http://127.0.0.1:8000
 
 Or http://127.0.0.1:8000/admin
 
 
 
-Now include Dockerfile to deploy:
+### Now include Dockerfile to deploy:
 
 ```
     $ git clone https://github.com/JuanjoA/wagtail-news-time.git
@@ -78,6 +78,6 @@ Now include Dockerfile to deploy:
 or simply (download from docker explore hub):
 
 ```
-    $ docker run -it --rm --name news -p 8000:8000 wagtail-news:0.1
+    $ docker run -it --rm --name news -p 8000:8000 juanjoa/wagtail-news-time:latest
 
 ```
